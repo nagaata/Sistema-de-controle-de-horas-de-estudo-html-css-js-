@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Controle de Estudos</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<h1>Controle de Horas de Estudo</h1>
+
+<h2>Cadastrar Disciplina</h2>
+
+<form id="formDisciplina">
+
+<input type="text" id="nome" placeholder="Nome da disciplina" required>
+
+<input type="text" id="professor" placeholder="Professor responsável" required>
+
+<input type="number" id="carga" placeholder="Carga horária total" required>
+
+<select id="area" required>
+<option value="">Área do conhecimento</option>
+<option>Exatas</option>
+<option>Humanas</option>
+<option>Biológicas</option>
+<option>Linguagens</option>
+<option>Artes</option>
+<option>Negócios / Administração</option>
+<option>Engenharia</option>
+<option>Ciências Sociais</option>
+<option>História</option>
+</select>
+
+<button type="submit">Cadastrar</button>
+
+</form>
+
+<h2>Disciplinas cadastradas</h2>
+
+<div id="listaDisciplinas"></div>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
