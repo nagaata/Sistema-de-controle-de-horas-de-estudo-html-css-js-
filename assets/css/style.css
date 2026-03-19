@@ -1,112 +1,153 @@
 /* estilo geral da página */
 body{
-font-family: Arial, Helvetica, sans-serif;
-background: linear-gradient(135deg,#4facfe,#00f2fe);
-margin:0;
-padding:40px;
-display:flex;
-flex-direction:column;
-align-items:center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+    margin:0;
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 /* titulo principal */
 h1{
-color:white;
-margin-bottom:30px;
+    color:white;
+    margin-bottom:30px;
+    text-align:center;
 }
 
 /* caixa do formulário */
 form{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-display:flex;
-flex-direction:column;
-width:280px;
-margin-bottom:30px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    max-width:400px;
+    margin-bottom:30px;
 }
 
 /* inputs */
 form input, form select{
-margin:8px 0;
-padding:10px;
-border-radius:5px;
-border:1px solid #ccc;
-font-size:14px;
+    margin:8px 0;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    font-size:14px;
+    width:100%;
 }
 
 /* botão do formulário */
 form button{
-margin-top:10px;
-padding:10px;
-border:none;
-border-radius:5px;
-background:#4facfe;
-color:white;
-font-weight:bold;
-cursor:pointer;
-transition:0.2s;
+    margin-top:10px;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background:#4facfe;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
 }
 
 form button:hover{
-background:#2f8ff0;
+    background:#2f8ff0;
 }
 
-/*lista de disciplinas*/
+/* lista de disciplinas */
 #listaDisciplinas{
-width:320px;
+    width:100%;
+    max-width:400px;
 }
 
-/*card da disciplina*/
+/* card da disciplina */
 .disciplina{
-background:white;
-padding:15px;
-margin:15px 0;
-border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.15);
+    background:white;
+    padding:15px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.15);
 }
 
-/*titulo da disciplina*/
+/* titulo da disciplina */
 .disciplina h3{
-margin-top:0;
-color:#333;
+    margin-top:0;
+    color:#333;
 }
 
-/*progresso*/
+/* progresso */
 .progresso{
-color:#2ecc71;
-font-weight:bold;
+    color:#2ecc71;
+    font-weight:bold;
 }
 
-/*botões dentro da disciplina*/
+/* botões dentro da disciplina */
 .disciplina button{
-margin-top:8px;
-margin-right:5px;
-padding:6px 10px;
-border:none;
-border-radius:5px;
-background:#4facfe;
-color:white;
-cursor:pointer;
-transition:0.2s;
+    margin-top:8px;
+    margin-right:5px;
+    padding:6px 10px;
+    border:none;
+    border-radius:5px;
+    background:#4facfe;
+    color:white;
+    cursor:pointer;
+    transition:0.2s;
 }
 
 .disciplina button:hover{
-background:#2f8ff0;
+    background:#2f8ff0;
 }
 
-/*input de horas*/
+/* input de horas */
 .disciplina input{
-margin-top:8px;
-padding:6px;
-border-radius:5px;
-border:1px solid #ccc;
-width:120px;
+    margin-top:8px;
+    padding:6px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    width:100%;
+    max-width:150px;
 }
 
 #listaDisciplinas p{
-font-size:18px;
-margin-top:20px;
-color:#333;
+    font-size:18px;
+    margin-top:20px;
+    color:#333;
+}
+
+/* 📱 RESPONSIVIDADE */
+@media (max-width: 600px){
+
+    body{
+        padding:15px;
+    }
+
+    h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:18px;
+        text-align:center;
+    }
+
+    form{
+        padding:15px;
+    }
+
+    .disciplina{
+        padding:12px;
+    }
+
+    /* botões ficam um embaixo do outro no celular */
+    .disciplina button{
+        width:100%;
+        margin-right:0;
+    }
+
+    .disciplina input{
+        width:100%;
+        max-width:100%;
+    }
 }
